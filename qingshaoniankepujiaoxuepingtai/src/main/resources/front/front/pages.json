@@ -1,0 +1,335 @@
+{
+	"pages": [{
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "登录"
+		}
+	},{
+		"path": "pages/register/register",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "注册"
+		}
+	},{
+		"path": "pages/forget/forget",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "忘记密码"
+		}
+	},{
+		"path": "pages/center/center",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的"
+		}
+	},{
+		"path": "pages/user-info/userinfo",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户信息"
+		}
+	}
+
+	,{
+		"path": "pages/kechuangzuopin/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "科创中心"
+		}
+	},{
+		"path": "pages/kechuangzuopin/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作品信息添加"
+		}
+	},{
+		"path": "pages/kechuangzuopin/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作品信息详情"
+		}
+	}
+	
+	,{
+		"path": "pages/wdkechuangzuopin/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的作品展示"
+		}
+	},{
+		"path": "pages/wdkechuangzuopin/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作品信息添加"
+		}
+	},{
+		"path": "pages/wdkechuangzuopin/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作品信息详情"
+		}
+	}
+	
+	,{
+		"path": "pages/kechuangzuopinLiuyan/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作品评论展示"
+		}
+	},{
+		"path": "pages/kechuangzuopinLiuyan/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作品评论添加"
+		}
+	},{
+		"path": "pages/kechuangzuopinLiuyan/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "作品评论详情"
+		}
+	}
+	,{
+		"path": "pages/news/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通知公告展示"
+		}
+	},{
+		"path": "pages/news/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通知公告添加"
+		}
+	},{
+		"path": "pages/news/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "通知公告详情"
+		}
+	}
+	,{
+		"path": "pages/shipin/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频信息展示"
+		}
+	},{
+		"path": "pages/shipin/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频信息添加"
+		}
+	},{
+		"path": "pages/shipin/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频信息详情"
+		}
+	}
+	,{
+		"path": "pages/shipinCollection/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频收藏展示"
+		}
+	},{
+		"path": "pages/shipinCollection/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频收藏添加"
+		}
+	},{
+		"path": "pages/shipinCollection/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频收藏详情"
+		}
+	}
+	,{
+		"path": "pages/shipinLiuyan/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频评论展示"
+		}
+	},{
+		"path": "pages/shipinLiuyan/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频评论添加"
+		}
+	},{
+		"path": "pages/shipinLiuyan/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "视频评论详情"
+		}
+	}
+	,{
+		"path": "pages/wenzhang/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章信息展示"
+		}
+	},{
+		"path": "pages/wenzhang/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章信息添加"
+		}
+	},{
+		"path": "pages/wenzhang/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章信息详情"
+		}
+	}
+	,{
+		"path": "pages/wenzhangCollection/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章收藏展示"
+		}
+	},{
+		"path": "pages/wenzhangCollection/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章收藏添加"
+		}
+	},{
+		"path": "pages/wenzhangCollection/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章收藏详情"
+		}
+	}
+	,{
+		"path": "pages/wenzhangLiuyan/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章评论展示"
+		}
+	},{
+		"path": "pages/wenzhangLiuyan/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章评论添加"
+		}
+	},{
+		"path": "pages/wenzhangLiuyan/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "文章评论详情"
+		}
+	}
+	,{
+		"path": "pages/yonghu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户展示"
+		}
+	},{
+		"path": "pages/yonghu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户添加"
+		}
+	},{
+		"path": "pages/yonghu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户详情"
+		}
+	}
+			,{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarBackgroundColor": "#47EDB5",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "首页"
+		}
+	}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "青少年科普教学系统平台",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#FFFFFF",
+		"selectedColor": "#07A771",
+		"borderStyle": "black",
+		"backgroundColor": "#47EDB5",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/index.png",
+				"selectedIconPath": "static/tabs/index1.png",
+				"text": "首页"
+			}
+			,{
+				"pagePath": "pages/shipin/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "视频信息"
+			}
+			,{
+				"pagePath": "pages/wenzhang/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "文章信息"
+			}
+			,{
+				"pagePath": "pages/kechuangzuopin/list",
+				"iconPath": "static/tabs/type.png",
+				"selectedIconPath": "static/tabs/type1.png",
+				"text": "科创中心"
+			}
+			,{
+				"pagePath": "pages/center/center",
+				"iconPath": "static/tabs/mine.png",
+				"selectedIconPath": "static/tabs/mine1.png",
+				"text": "我的"
+			}
+		]
+	}
+}

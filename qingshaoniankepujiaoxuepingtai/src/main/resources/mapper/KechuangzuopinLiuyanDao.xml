@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.KechuangzuopinLiuyanDao">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        a.id as id
+        ,a.kechuangzuopin_id as kechuangzuopinId
+        ,a.yonghu_id as yonghuId
+        ,a.kechuangzuopin_liuyan_text as kechuangzuopinLiuyanText
+        ,a.insert_time as insertTime
+        ,a.create_time as createTime
+    </sql>
+    <select id="selectListView" parameterType="map" resultType="com.entity.view.KechuangzuopinLiuyanView" >
+        SELECT
+        <include refid="Base_Column_List" />
+
+--         级联表的字段
+        ,kechuangzuopin.kechuangzuopin_name as kechuangzuopinName
+        ,kechuangzuopin.kechuangzuopin_types as kechuangzuopinTypes
+        ,kechuangzuopin.kechuangzuopin_photo as kechuangzuopinPhoto
+        ,kechuangzuopin.yonghu_id as kechuangzuopinYonghuId
+        ,kechuangzuopin.kechuangzuopin_content as kechuangzuopinContent
+        ,yonghu.yonghu_name as yonghuName
+        ,yonghu.yonghu_photo as yonghuPhoto
+        ,yonghu.yonghu_phone as yonghuPhone
+        ,yonghu.yonghu_email as yonghuEmail
+        ,yonghu.yonghu_delete as yonghuDelete
+
+        FROM kechuangzuopin_liuyan  a
+        left JOIN kechuangzuopin kechuangzuopin ON a.kechuangzuopin_id = kechuangzuopin.id
+        left JOIN yonghu yonghu ON a.yonghu_id = yonghu.id
+
+        <where>
+            <if test="params.ids != null">
+                and a.id in
+                <foreach item="item" index="index" collection="params.ids" open="(" separator="," close=")">
+                #{item}
+                </foreach>
+            </if>
+            <if test="params.kechuangzuopinId != null and params.kechuangzuopinId != ''">
+                and (
+                    a.kechuangzuopin_id = #{params.kechuangzuopinId}
+                )
+            </if>
+            <if test="params.yonghuId != null and params.yonghuId != ''">
+                and (
+                    a.yonghu_id = #{params.yonghuId}
+                    or kechuangzuopin.yonghu_id = #{params.yonghuId}
+                )
+            </if>
+            <if test=" params.kechuangzuopinLiuyanText != '' and params.kechuangzuopinLiuyanText != null and params.kechuangzuopinLiuyanText != 'null' ">
+                and a.kechuangzuopin_liuyan_text like CONCAT('%',#{params.kechuangzuopinLiuyanText},'%')
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(a.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+
+                <!-- 判断作品信息的id不为空 -->
+            <if test=" params.kechuangzuopinIdNotNull != '' and params.kechuangzuopinIdNotNull != null and params.kechuangzuopinIdNotNull != 'null' ">
+                and a.kechuangzuopin_id IS NOT NULL
+            </if>
+            <if test=" params.kechuangzuopinName != '' and params.kechuangzuopinName != null and params.kechuangzuopinName != 'null' ">
+                and kechuangzuopin.kechuangzuopin_name like CONCAT('%',#{params.kechuangzuopinName},'%')
+            </if>
+            <if test="params.kechuangzuopinTypes != null  and params.kechuangzuopinTypes != ''">
+                and kechuangzuopin.kechuangzuopin_types = #{params.kechuangzuopinTypes}
+            </if>
+
+            <if test=" params.kechuangzuopinContent != '' and params.kechuangzuopinContent != null and params.kechuangzuopinContent != 'null' ">
+                and kechuangzuopin.kechuangzuopin_content like CONCAT('%',#{params.kechuangzuopinContent},'%')
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(kechuangzuopin.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(kechuangzuopin.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+                <!-- 判断用户的id不为空 -->
+            <if test=" params.yonghuIdNotNull != '' and params.yonghuIdNotNull != null and params.yonghuIdNotNull != 'null' ">
+                and a.yonghu_id IS NOT NULL
+            </if>
+            <if test=" params.yonghuName != '' and params.yonghuName != null and params.yonghuName != 'null' ">
+                and yonghu.yonghu_name like CONCAT('%',#{params.yonghuName},'%')
+            </if>
+            <if test=" params.yonghuPhone != '' and params.yonghuPhone != null and params.yonghuPhone != 'null' ">
+                and yonghu.yonghu_phone like CONCAT('%',#{params.yonghuPhone},'%')
+            </if>
+            <if test=" params.yonghuEmail != '' and params.yonghuEmail != null and params.yonghuEmail != 'null' ">
+                and yonghu.yonghu_email like CONCAT('%',#{params.yonghuEmail},'%')
+            </if>
+            <if test="params.yonghuDeleteStart != null  and params.yonghuDeleteStart != '' ">
+                <![CDATA[  and yonghu.yonghu_delete >= #{params.yonghuDeleteStart}   ]]>
+            </if>
+            <if test="params.yonghuDeleteEnd != null  and params.yonghuDeleteEnd != '' ">
+                <![CDATA[  and yonghu.yonghu_delete <= #{params.yonghuDeleteEnd}   ]]>
+            </if>
+            <if test="params.yonghuDelete != null  and params.yonghuDelete != '' ">
+                and yonghu.yonghu_delete = #{params.yonghuDelete}
+            </if>
+            <if test=" params.insertTimeStart != '' and params.insertTimeStart != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(yonghu.insert_time) >= UNIX_TIMESTAMP(#{params.insertTimeStart}) ]]>
+            </if>
+            <if test=" params.insertTimeEnd != '' and params.insertTimeEnd != null ">
+                <![CDATA[  and UNIX_TIMESTAMP(yonghu.insert_time) <= UNIX_TIMESTAMP(#{params.insertTimeEnd}) ]]>
+            </if>
+        </where>
+
+        order by a.${params.orderBy} desc 
+    </select>
+
+</mapper>
